@@ -14,8 +14,11 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
-//connect to Mongo DB
-mongoose.connect("mongodb://localhost/booksdb", { useNewUrlParser: true });
+// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/booksdb";
+
+//connect to mongodb
+mongoose.connect(MONGODB_URI);
 
 //api routes
 //TODO API Routes GO Here
