@@ -8,6 +8,7 @@ const Search = props => {
             <div className="row">
               <div className="input-field col s12">
                 <input
+                  name="search"
                   placeholder="Search for a book"
                   id="book_search"
                   type="text"

@@ -28,8 +28,10 @@ class searchPage extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    console.log(this.state.search)
     API.getBook(this.state.search)
       .then(res => {
+        console.log(res.data)
         this.setState({
           books: res.data.items
         });
