@@ -20,7 +20,7 @@ const Search = props => {
             </div>
             <div className="row">
               <div className="col s3 offset-s9">
-                <Button onClick={props.handleSubmit} className="waves-effect waves-light btn">Search</Button>
+                <button onClick={props.handleSubmit} className="waves-effect waves-light btn">Search</button>
               </div>
             </div>
           </form>
