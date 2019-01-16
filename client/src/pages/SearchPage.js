@@ -58,26 +58,26 @@ class searchPage extends React.Component {
   render() {
     return(
       <div className="container">
-        <div className="row">
-          <Search
-            value={this.state.title}
-            handleInputChange={this.handleInputChange}
-            handleSubmit={this.handleSubmit}
+        <Search
+          value={this.state.title}
+          handleInputChange={this.handleInputChange}
+          handleSubmit={this.handleSubmit}
+        />
+      <div className="row">
+        {this.state.books.map((book, index) => (
+          <Book
+            cardType="save"
+            handleSave={this.handleSave}
+            key={index}
+            id={index}
+            title={book.volumeInfo.title}
+            authors={book.volumeInfo.authors}
+            description={book.volumeInfo.description}
+            image={book.volumeInfo.imageLinks.smallThumbnail}
+            link={book.volumeInfo.infoLink}
           />
-        </div>
-        <div className="row">
-          {this.state.books.map((book, index) => (
-            <Book
-              handleSave={this.handleSave}
-              key={index}
-              id={index}
-              title={book.volumeInfo.title}
-              author={book.volumeInfo.authors}
-              description={book.volumeInfo.description}
-              image={book.volumeInfo.imageLinks.smallThumbnail}
-            />
-          ))}
-        </div>
+        ))}
+      </div>
       </div>
     )
   }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Search = props => {
     return (
-      <div>
+      <div className="topmargin-small">
         <div className="row">
           <form className="col s12">
             <div className="row">
@@ -21,7 +21,7 @@ const Search = props => {
             </div>
             <div className="row">
               <div className="col s3 offset-s9">
-                <button onClick={props.handleSubmit} className="waves-effect waves-light btn">Search</button>
+                <button onClick={props.handleSubmit} className="waves-effect light-green darken-2 btn">Search</button>
               </div>
             </div>
           </form>
