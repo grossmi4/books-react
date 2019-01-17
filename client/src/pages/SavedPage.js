@@ -25,7 +25,7 @@ class SavedPage extends React.Component {
       id: book._id
     };
     API.deleteBook(deletedBook.id)
-      .then(res => {
+      .then(() => {
         API.getSavedBooks()
           .then(res => {
             this.setState({
