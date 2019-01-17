@@ -20,9 +20,9 @@ class SavedPage extends React.Component {
   };
 
   handleDelete = event => {
-    const book = this.state.books[event.target.id].volumeInfo;
+    const book = this.state.books[event.target.id];
     const deletedBook = {
-      id: book.id
+      id: book._id
     };
     API.deleteBook(deletedBook.id)
       .then(API.getSavedBooks()
