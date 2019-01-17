@@ -28,7 +28,7 @@ class SavedPage extends React.Component {
       .then(API.getSavedBooks()
         .then(res => {
           this.setState({
-            books: res.data.books
+            books: res.data
           })
         })
       )
