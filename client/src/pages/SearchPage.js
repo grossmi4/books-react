@@ -49,10 +49,10 @@ class searchPage extends React.Component {
     };
     API.saveBook(newBook)
       .then(res => {
-        this.setState({
-          books: []
+        console.log(res);
+        alert("Book Saved Successfully")
         })
-      })
+      .catch(err => console.log(err))
   };
 
   render() {
