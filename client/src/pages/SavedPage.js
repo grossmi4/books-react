@@ -52,10 +52,10 @@ class SavedPage extends React.Component {
               handleDelete={this.handleDelete}
               key={index}
               id={index}
-              title={book.volumeInfo.title}
-              author={book.volumeInfo.authors}
-              description={book.volumeInfo.description}
-              image={book.volumeInfo.imageLinks.smallThumbnail}
+              title={book.title}
+              author={book.authors}
+              description={book.description}
+              image={book.image}
             />
           ))}
         </div>
