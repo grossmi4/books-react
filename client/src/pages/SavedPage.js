@@ -48,7 +48,7 @@ class SavedPage extends React.Component {
         <div className="row">
           {this.state.books.map((book, index) => (
             <Book
-              cardType="save"
+              cardType="delete"
               handleDelete={this.handleDelete}
               key={index}
               id={index}
