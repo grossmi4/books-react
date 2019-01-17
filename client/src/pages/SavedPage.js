@@ -9,7 +9,7 @@ class SavedPage extends React.Component {
   };
 
   componentDidMount() {
-    API.getBooks()
+    API.getSavedBooks()
       .then(res => {
         console.log(res);
         this.setState({
