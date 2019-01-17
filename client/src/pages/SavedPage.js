@@ -13,7 +13,7 @@ class SavedPage extends React.Component {
       .then(res => {
         console.log(res);
         this.setState({
-          books: res.data.items
+          books: res.data
         });
         console.log(this.state.books);
       })
@@ -35,6 +35,7 @@ class SavedPage extends React.Component {
   };
 
   render() {
+    console.log(this.state.books);
     return(
       <div className="container">
         <div className="row">
